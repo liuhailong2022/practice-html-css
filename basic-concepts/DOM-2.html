@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Document</title>
+    </head>
+    <body>
+        <div class="main-body">
+            <h1>Article Heading</h1>
+            <p>Some text in the article</p>
+            <p>Some more text</p>
+            <ul>
+                <li>List item 1</li>
+                <li>List item 2</li>
+                <li>List item 3</li>
+            </ul>
+        </div>
+        <div class="footer">
+            <p>Site created by Jason</p>
+        </div>
+        <script>
+            const newItem = document.createElement('li')
+            newItem.textContent = 'Another Item'
+            document.querySelector('ul').appendChild(newItem)
+
+            const pElem = document.querySelectorAll('p').item(1)
+            const parent = document.querySelector('.main-body')
+            // create a new P element
+            const newP = document.createElement('p')
+            newP.textContent = 'This is a new paragraph added by the script'
+
+            parent.insertBefore(newP, pElem)
+
+        </script>
+    </body>
+</html>
